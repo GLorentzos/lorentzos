@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Lorentzos</title>
+<meta property="og:title" content="Lorentzos">
+<meta property="og:description" content="Lorentzos Landing Page">
+<meta property="og:image" content="https://lorentzos.digital/images/logoBlue.png">
+<meta property="og:url" content="https://lorentzos.digital">
+<meta name="keywords" content="Lorentzos, lorentzos">
+<meta name="author" content="Lorentzos">
+<meta name="description" content="Lorentzos Landing Page">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="https://lorentzos.digital/images/logo.png" type="https://lorentzos.digital/images/logo.png">
+<link rel="shortcut icon" href="https://lorentzos.digital/images/logo.png" type="https://lorentzos.digital/images/logo.png">
+<link rel="stylesheet" href="https://lorentzos.digital/js/styles.css">
+<script src="https://cdn.jsdelivr.net/npm/javascript-obfuscator/dist/index.browser.js"></script>
+</head>
+  
+<body>
+  <section>
+    <h1>JavaScript Obfuscator</h1>
+    <input type="file" id="fileInput">
+    <button onclick="obfuscateFile()">Download Obfuscate File</button>
+  </section>
+  <section>
+    <div class="container">
+      <div class="left-section">
+        <textarea id="normalCode" placeholder="Enter your code here" rows="10"></textarea>
+        <br>
+        <button onclick="obfuscateCode()">Obfuscate</button>
+      </div>
+    </div>
+    <div class="container">
+      <div class="right-section">
+        <h2>Encrypted Code</h2>
+        <textarea id="encryptedCodeResult" rows="10" readonly></textarea>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // document.getElementById('fileInput').addEventListener('change', handleFileSelect);
+
+    function handleFileSelect(event) {
+      var file = event.target.files[0];
+      var fileReader = new FileReader();
+      fileReader.onload = function (event) {
+        var contents = event.target.result;
+        document.getElementById('normalCode').value = contents;
+      };
+      fileReader.readAsText(file);
+    }
+
+    function obfuscateCode() {
+      var normalCode = document.getElementById('normalCode').value;
+      var obfuscatedCode = obfuscateJavaScript(normalCode);
+      document.getElementById('normalCode').value = normalCode;
+      document.getElementById('encryptedCodeResult').value = obfuscatedCode;
+    }
+
+    function obfuscateJavaScript(code) {
+      var obfuscationResult = JavaScriptObfuscator.obfuscate(code, {
+        exclude: [/script\.js$/] // Exclude script.js file from obfuscation
+      });
+      var obfuscatedCode = obfuscationResult.getObfuscatedCode();
+      return obfuscatedCode;
+    }
+
+    function obfuscateFile() {
+      var fileInput = document.getElementById('fileInput');
+      var file = fileInput.files[0];
+
+      if (file) {
+        var fileReader = new FileReader();
+        fileReader.onload = function (event) {
+          var contents = event.target.result;
+          var obfuscatedCode = obfuscateJavaScript(contents);
+          downloadFile(obfuscatedCode, getFileNameWithoutExtension(file.name) + '_obfuscated.js');
+        };
+        fileReader.readAsText(file);
+      }
+    }
+
+    function downloadFile(content, filename) {
+      var element = document.createElement('a');
+      element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(content));
+      element.setAttribute('download', filename);
+      element.style.display = 'none';
+      document.body.appendChild(element);
+      element.click();
+      document.body.removeChild(element);
+    }
+
+    function getFileNameWithoutExtension(filename) {
+      return filename.split('.').slice(0, -1).join('.');
+    }
+  </script>
+</body>
+</html>

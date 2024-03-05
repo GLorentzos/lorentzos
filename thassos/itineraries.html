@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lorentzos</title>
+<meta property="og:title" content="Lorentzos">
+<meta property="og:description" content="Lorentzos Landing Page">
+<meta property="og:image" content="https://lorentzos.digital/images/logoBlue.png">
+<meta property="og:url" content="https://lorentzos.digital">
+<meta name="keywords" content="Lorentzos, lorentzos">
+<meta name="author" content="Lorentzos">
+<meta name="description" content="Lorentzos Landing Page">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="https://lorentzos.digital/images/logo.png" type="https://lorentzos.digital/images/logo.png">
+<link rel="shortcut icon" href="https://lorentzos.digital/images/logo.png" type="https://lorentzos.digital/images/logo.png">
+</head>
+    <style>
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+    cursor: pointer;
+    margin: 10px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border-bottom: 1px solid #ddd;
+    max-height: 100px; /* Adjust the maximum height for better mobile display */
+}
+
+.card h2 {
+    padding: 15px;
+    color: #333;
+    margin: 0;
+    text-align: center;
+}
+
+
+    </style>
+<body>
+    <!-- <div class="card" onclick="location.href='https://lorentzos.digital';">
+    <caption class="caption-main"><img class="logo" src="img/logoBlue.png"/>
+      
+      </caption> -->
+
+    </div>
+    <div class="title">ΔΡΟΜΟΛΟΓΙΑ THASSOS</div>
+    <div class="title">επιλέξτε ένα από τα παρακάτω</div>
+
+    <div class="container">
+        <div class="card" onclick="location.href='itineraries/bus';">
+            <img src="img/bus.png" alt="Bus Image">
+            <h2>Λεωφορείο</h2>
+        </div>
+
+
+        <div class="card" onclick="location.href='https://taxithassoslimenariapotos.com';">
+            <img src="img/taxi.png" alt="Bus Image">
+            <h2>taxi</h2>
+        </div>
+
+        <div class="card" onclick="location.href='itineraries/ferry';">
+            <img src="img/ferry.png" alt="Bus Image">
+            <h2>ferry</h2>
+        </div>
+        <!-- <div class="card" onclick="location.href='';">
+            <img src="img/ferry.png" alt="Ferry Image">
+       
+            <h2>Ferry</h2>
+        </div> -->
+        <div class="card" onclick="location.href='https://lorentzos.digital';">
+            <caption class="caption-main"><img class="logo" src="img/logoBlue.png"/>
+                <h2>Lorentzos</h2>
+              </caption>
+    </div>
+
+</body>
+</html>
