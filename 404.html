@@ -1,101 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>404 Not Found</title>
-<meta property="og:title" content="Lorentzos">
-<meta property="og:description" content="Lorentzos Landing Page">
-<meta property="og:image" content="https://lorentzos.digital/images/logoBlue.png">
-<meta property="og:url" content="https://lorentzos.digital">
-<meta name="keywords" content="Lorentzos, lorentzos">
-<meta name="author" content="Lorentzos">
-<meta name="description" content="Lorentzos Landing Page">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" href="https://lorentzos.digital/images/logo.png" type="https://lorentzos.digital/images/logo.png">
-<link rel="shortcut icon" href="https://lorentzos.digital/images/logo.png" type="https://lorentzos.digital/images/logo.png">
-</head>
+    <meta charset="UTF-8">
+    <title>404 Error</title>
+    <meta property="og:title" content="Lorentzos">
+    <meta property="og:description" content="Lorentzos Landing Page">
+    <meta property="og:image" content="https://lorentzos.digital/images/logoBlue.png">
+    <meta property="og:url" content="https://lorentzos.digital">
+    <meta name="keywords" content="Lorentzos, lorentzos">
+    <meta name="author" content="Lorentzos">
+    <meta name="description" content="Lorentzos Landing Page">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="https://lorentzos.digital/images/logo.png" type="https://lorentzos.digital/images/logo.png">
+    <link rel="shortcut icon" href="https://lorentzos.digital/images/logo.png" type="https://lorentzos.digital/images/logo.png">
     <style>
         body {
+            color: #000;
+            background: #f5f5f5;
             margin: 0;
-            padding: 0;
+            font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+            text-align: center;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             height: 100vh;
-            background-color: #ffffff; /* Blue color */
-            color: #0098fd; /* White color */
-            font-family: 'Arial', sans-serif;
-            overflow: hidden;
         }
 
-        .container {
-            text-align: center;
-        }
-
-        .number {
-            font-size: 10rem;
-            font-weight: bold;
+        h1, h2 {
             margin: 0;
+            font-weight: 500;
         }
-
-        .text {
-            font-size: 2rem;
-            margin: 10px 0;
+        h1 {
+            font-size: 24px;
+            line-height: 48px;
         }
-
-        .box {
-            position: relative;
-            width: 100px;
-            height: 100px;
-            margin: 20px auto;
-        }
-
-        .box:before,
-        .box:after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            border: 6px solid #0084ff; /* White color */
-            animation: move 2s infinite linear;
-        }
-
-        .box:before {
-            top: -2px;
-            left: -2px;
-            animation-delay: 0.5s;
-        }
-
-        .box:after {
-            bottom: -2px;
-            right: -2px;
-        }
-
-        @keyframes move {
-            0% {
-                transform: translate(0, 0);
-            }
-            25% {
-                transform: translate(100%, 0);
-            }
-            50% {
-                transform: translate(100%, 100%);
-            }
-            75% {
-                transform: translate(0, 100%);
-            }
-            100% {
-                transform: translate(0, 0);
-            }
+        h2 {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 28px;
         }
     </style>
-
-
+</head>
 <body>
-    <div class="container">
-        <h1 class="number">404</h1>
-        <p class="text">Oops! Page not found.</p>
-        <div class="box"></div>
+    <div>
+        <div>
+            <h1>404</h1>
+            <div>
+                <h2>This page could not be found.</h2>
+            </div>
+        </div>
     </div>
 </body>
 </html>

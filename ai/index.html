@@ -19,11 +19,11 @@
 
 
     <style id="original-css">
-body {
+           body {
     margin: 0;
     font-family: 'Noto Sans GR', 'Arial', sans-serif;
-    background: linear-gradient(to bottom, #1d2a47, #0f172b); /* Updated background with gradient */
-    color: #fff;
+    background: linear-gradient(to bottom, #ecf0f1, #dfe6e9);
+    color: #333; /* Dark Grey */
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -36,7 +36,7 @@ body {
     flex-direction: column;
     align-items: center;
     overflow: hidden;
-    margin: 20px; /* Add margin to create space around the chat container */
+    margin: 20px;
 }
 
 #chat-messages {
@@ -47,11 +47,10 @@ body {
     align-items: flex-start;
     padding: 15px;
     overflow-y: auto;
-    width: calc(100% - 40px); /* Adjusted width to consider the added margins */
+    width: calc(100% - 40px);
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
-
 
 .user-message,
 .bot-message {
@@ -62,51 +61,45 @@ body {
     position: relative;
     align-items: flex-start;
     word-wrap: break-word;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .user-message {
-    background: #2a3c69;
-    color: #fff;
+    background: #3498db; /* Light Blue */
+    color: #fff; /* White */
     align-self: flex-end;
     position: relative;
     margin-right: 20px;
     align-items: flex-start;
-    padding-right: 20px; /* Added decoration padding for user messages */
+    padding-right: 20px;
+    animation: slideInRight 0.5s ease;
 }
 
-.user-message:before {
-    color: #ffffff;
-    align-items: flex-start;
-    align-self: flex-start;
-    position: relative;
-    border: none;
-    color: #fff;
-    outline: none;
-    background-color: #2b3a63;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    margin-left: 20px;
-    padding-left: 20px; /* Added decoration padding for bot messages */
 
-}
 
 .bot-message {
-
-    color: #ffffff;
+    color: #333; /* Dark Grey */
     align-items: flex-start;
     align-self: flex-start;
     position: relative;
     border: none;
-    color: #fff;
     outline: none;
-    background-color: #2b3a63;
+    background-color: #ecf0f1; /* Light Grey */
     transition: all 0.3s ease;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     margin-left: 20px;
-    padding-left: 20px; /* Added decoration padding for bot messages */
+    padding-left: 20px;
+    animation: slideInLeft 0.5s ease;
 }
-
-
 
 #user-input {
     display: flex;
@@ -114,8 +107,8 @@ body {
     padding: 25px;
     width: 100%;
     justify-content: space-between;
-    margin: 2 auto;
     position: sticky;
+    bottom: 0;
     z-index: 1000;
 }
 
@@ -123,6 +116,7 @@ body {
     display: flex;
     align-items: center;
     width: 100%;
+    position: relative;
 }
 
 .input-wrapper {
@@ -135,81 +129,78 @@ body {
     flex-grow: 1;
     padding: 20px;
     border: none;
-    color: #fff;
+    color: #333; /* Dark Grey */
     outline: none;
-    background-color: #192646;
+    background-color: #fff; /* White */
     transition: all 0.3s ease;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
 }
 
 #message-input:focus {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adjusted box shadow on focus */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 #message-input::placeholder {
-    font-size: 12px; /* Adjusted placeholder font size */
-
-    transition: transform 0.3s ease; /* Added transition for placeholder animation */
-    color: #fff;
+    font-size: 12px;
+    transition: transform 0.3s ease;
+    color: #bbb; /* Light Grey */
 }
 
 #message-input:focus::placeholder {
-    transform: translateY(-10px); /* Adjusted placeholder position on focus */
-    color: #3498db; /* Changed placeholder color on focus */
+    transform: translateY(-10px);
+    color: #999; /* Slightly Darker Grey */
 }
 
 #send-button {
-    background-color: #ffffff00;
-    color: #fff;
+    background-color: #3498db00; /* Light Blue */
+    color: #fff; /* White */
     border: none;
     padding: 8px;
-    
     cursor: pointer;
-    margin-left: -80px; /* Adjusted margin to overlap with the input */
-}
-
-#send-button:hover {
-    background-color: #ffffff00;
+    margin-left: -80px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
 }
 
 #send-button svg {
     width: 20px;
-    height: 10px;
-    fill: #fff;
+    height: 20px;
+    fill: #fff; /* White */
 }
 
-
-
 #voice-button {
-            background-color: #192646;
-            color: #fff;
-            border: none;
-            padding: 8px;
-            cursor: pointer;
-            margin-right: 10px;
-            display: flex;
-            align-items: center;
-        }
+    background-color: #fff; /* White */
+    color: #333; /* Dark Grey */
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
 
-        #voice-button:hover {
-            background-color: #2a3c69;
-        }
+#voice-button:hover {
+    background-color: #eee; /* Light Grey */
+}
 
-        #voice-button svg {
-            width: 24px;
-            height: 24px;
-            fill: #fff;
+#voice-button svg {
+    width: 24px;
+    height: 24px;
+    fill: #333; /* Dark Grey */
+}
 
-        }
-
-        #chat-messages::-webkit-scrollbar {
+#chat-messages::-webkit-scrollbar {
     width: 0;
-    background: transparent; /* Make the scrollbar track transparent */
+    background: transparent;
 }
 
 #chat-messages::-webkit-scrollbar-thumb {
-    background: transparent; /* Make the scrollbar thumb (handle) transparent */
+    background: transparent;
 }
+
 
 #toggleCssButton {
     position: fixed;
@@ -232,7 +223,7 @@ body {
     <div id="chat-container">
         <div id="chat-messages"></div>
         <button id="toggleCssButton">
-            <img id="toggleButtonImage" src="./images/CssMode/darkbuttonStyle.png" alt="Toggle CSS">
+            <img id="toggleButtonImage" src="./images/CssMode/lightbuttonStyle.png" alt="Toggle CSS">
         </button>
         <div id="user-input">
             <div class="input-container">
@@ -255,6 +246,219 @@ body {
     
     <script>
         var originalCss = `
+
+        body {
+    margin: 0;
+    font-family: 'Noto Sans GR', 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #ecf0f1, #dfe6e9);
+    color: #333; /* Dark Grey */
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+#chat-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    margin: 20px;
+}
+
+#chat-messages {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    align-items: flex-start;
+    padding: 15px;
+    overflow-y: auto;
+    width: calc(100% - 40px);
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.user-message,
+.bot-message {
+    margin-bottom: 15px;
+    padding: 12px;
+    border-radius: 8px;
+    max-width: 70%;
+    position: relative;
+    align-items: flex-start;
+    word-wrap: break-word;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.user-message {
+    background: #3498db; /* Light Blue */
+    color: #fff; /* White */
+    align-self: flex-end;
+    position: relative;
+    margin-right: 20px;
+    align-items: flex-start;
+    padding-right: 20px;
+    animation: slideInRight 0.5s ease;
+}
+
+.user-message:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 20px 20px 0;
+    border-color: transparent #3498db transparent transparent;
+}
+
+.bot-message {
+    color: #333; /* Dark Grey */
+    align-items: flex-start;
+    align-self: flex-start;
+    position: relative;
+    border: none;
+    outline: none;
+    background-color: #ecf0f1; /* Light Grey */
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin-left: 20px;
+    padding-left: 20px;
+    animation: slideInLeft 0.5s ease;
+}
+
+#user-input {
+    display: flex;
+    align-items: center;
+    padding: 25px;
+    width: 100%;
+    justify-content: space-between;
+    position: sticky;
+    bottom: 0;
+    z-index: 1000;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+#message-input {
+    flex-grow: 1;
+    padding: 20px;
+    border: none;
+    color: #333; /* Dark Grey */
+    outline: none;
+    background-color: #fff; /* White */
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+#message-input:focus {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#message-input::placeholder {
+    font-size: 12px;
+    transition: transform 0.3s ease;
+    color: #bbb; /* Light Grey */
+}
+
+#message-input:focus::placeholder {
+    transform: translateY(-10px);
+    color: #999; /* Slightly Darker Grey */
+}
+
+#send-button {
+    background-color: #3498db00; /* Light Blue */
+    color: #fff; /* White */
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    margin-left: -80px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+#send-button svg {
+    width: 20px;
+    height: 20px;
+    fill: #fff; /* White */
+}
+
+#voice-button {
+    background-color: #fff; /* White */
+    color: #333; /* Dark Grey */
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+#voice-button:hover {
+    background-color: #eee; /* Light Grey */
+}
+
+#voice-button svg {
+    width: 24px;
+    height: 24px;
+    fill: #333; /* Dark Grey */
+}
+
+#chat-messages::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
+#chat-messages::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+
+
+#toggleCssButton {
+    position: fixed;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            outline: none;
+            padding: 20px; /* Increase padding for a larger clickable area */
+        }
+
+        #toggleCssButton img {
+            width: 60px; /* Increase the width of the image */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        `;
+
+        var newCss = `
         body {
     margin: 0;
     font-family: 'Noto Sans GR', 'Arial', sans-serif;
@@ -469,217 +673,6 @@ body {
         }
         `;
 
-        var newCss = `
-        body {
-    margin: 0;
-    font-family: 'Noto Sans GR', 'Arial', sans-serif;
-    background: linear-gradient(to bottom, #ecf0f1, #dfe6e9);
-    color: #333; /* Dark Grey */
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    overflow-x: hidden;
-}
-
-#chat-container {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow: hidden;
-    margin: 20px;
-}
-
-#chat-messages {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-    align-items: flex-start;
-    padding: 15px;
-    overflow-y: auto;
-    width: calc(100% - 40px);
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-
-.user-message,
-.bot-message {
-    margin-bottom: 15px;
-    padding: 12px;
-    border-radius: 8px;
-    max-width: 70%;
-    position: relative;
-    align-items: flex-start;
-    word-wrap: break-word;
-    animation: fadeIn 0.5s ease;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-.user-message {
-    background: #3498db; /* Light Blue */
-    color: #fff; /* White */
-    align-self: flex-end;
-    position: relative;
-    margin-right: 20px;
-    align-items: flex-start;
-    padding-right: 20px;
-    animation: slideInRight 0.5s ease;
-}
-
-.user-message:before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 20px 20px 0;
-    border-color: transparent #3498db transparent transparent;
-}
-
-.bot-message {
-    color: #333; /* Dark Grey */
-    align-items: flex-start;
-    align-self: flex-start;
-    position: relative;
-    border: none;
-    outline: none;
-    background-color: #ecf0f1; /* Light Grey */
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    margin-left: 20px;
-    padding-left: 20px;
-    animation: slideInLeft 0.5s ease;
-}
-
-#user-input {
-    display: flex;
-    align-items: center;
-    padding: 25px;
-    width: 100%;
-    justify-content: space-between;
-    position: sticky;
-    bottom: 0;
-    z-index: 1000;
-}
-
-.input-container {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    position: relative;
-}
-
-.input-wrapper {
-    display: flex;
-    align-items: center;
-    width: 100%;
-}
-
-#message-input {
-    flex-grow: 1;
-    padding: 20px;
-    border: none;
-    color: #333; /* Dark Grey */
-    outline: none;
-    background-color: #fff; /* White */
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-}
-
-#message-input:focus {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-#message-input::placeholder {
-    font-size: 12px;
-    transition: transform 0.3s ease;
-    color: #bbb; /* Light Grey */
-}
-
-#message-input:focus::placeholder {
-    transform: translateY(-10px);
-    color: #999; /* Slightly Darker Grey */
-}
-
-#send-button {
-    background-color: #3498db00; /* Light Blue */
-    color: #fff; /* White */
-    border: none;
-    padding: 8px;
-    cursor: pointer;
-    margin-left: -80px;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
-}
-
-#send-button svg {
-    width: 20px;
-    height: 20px;
-    fill: #fff; /* White */
-}
-
-#voice-button {
-    background-color: #fff; /* White */
-    color: #333; /* Dark Grey */
-    border: none;
-    padding: 8px;
-    cursor: pointer;
-    margin-right: 10px;
-    display: flex;
-    align-items: center;
-    border-radius: 8px;
-    transition: background-color 0.3s ease;
-}
-
-#voice-button:hover {
-    background-color: #eee; /* Light Grey */
-}
-
-#voice-button svg {
-    width: 24px;
-    height: 24px;
-    fill: #333; /* Dark Grey */
-}
-
-#chat-messages::-webkit-scrollbar {
-    width: 0;
-    background: transparent;
-}
-
-#chat-messages::-webkit-scrollbar-thumb {
-    background: transparent;
-}
-
-
-#toggleCssButton {
-    position: fixed;
-            top: 10px;
-            right: 10px;
-            background: none;
-            border: none;
-            cursor: pointer;
-            outline: none;
-            padding: 20px; /* Increase padding for a larger clickable area */
-        }
-
-        #toggleCssButton img {
-            width: 60px; /* Increase the width of the image */
-            height: auto; /* Maintain aspect ratio */
-        }
-        `;
-
         var isOriginalCss = true;
 
         document.getElementById('toggleCssButton').addEventListener('click', function() {
@@ -691,10 +684,10 @@ body {
     // Toggle between original and new CSS
     if (isOriginalCss) {
                 styleElement.innerHTML = newCss;
-        buttonImage.src = "./images/CssMode/lightbuttonStyle.png"; // Change to the new button image
+        buttonImage.src = "./images/CssMode/darkbuttonStyle.png"; // Change to the new button image
     } else {
                 styleElement.innerHTML = originalCss;
-        buttonImage.src = "./images/CssMode/darkbuttonStyle.png"; // Change to the original button image
+        buttonImage.src = "./images/CssMode/lightbuttonStyle.png"; // Change to the original button image
     }
 
     // Update the toggle state
