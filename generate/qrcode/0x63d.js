@@ -1,87 +1,77 @@
-// Define a function that takes two parameters
-function processInput(input1, input2) {
-    // A function call to initialize some variables
-    var data = initializeData();
-  
-    // Redefine the function to use the initialized data
-    processInput = function (param1, param2) {
-      param1 = param1 - 332;
-      var result = data[param1];
-      return result;
-    }
-  
-    // Return the result of the redefined function with the provided inputs
-    return processInput(input1, input2);
-  }
-  
-  // Store the initial function in a variable
-  var processData = processInput;
-  
-  // Immediately invoked function expression (IIFE) with two parameters
-  (function (callback, targetValue) {
-    // Store the initial function in a variable
-    var initialData = processInput();
-  
-    // Loop until a certain condition is met
-    while (true) {
-      try {
-        // Some complex mathematical operations
-        var computedValue =
-          (-parseInt(callback(337)) / 1) * (-parseInt(callback(344)) / 2) +
-          parseInt(callback(339)) / 3 +
-          (-parseInt(callback(336)) / 4) * (parseInt(callback(340)) / 5) +
-          parseInt(callback(342)) / 6 +
-          parseInt(callback(343)) / 7 +
-          (parseInt(callback(333)) / 8) * (parseInt(callback(338)) / 9) +
-          (parseInt(callback(332)) / 10) * (-parseInt(callback(341)) / 11);
-  
-        // Check if the computed value matches the target value
-        if (computedValue === targetValue) {
-          break;
-        } else {
-          // Shift elements in an array
-          initialData.push(initialData.shift());
+
+// Lorentzos Encryption --()
+
+var _0x45f0da = _0x1600;
+(function(_0x92936e, _0x36ffae) {
+    var _0x53212e = _0x1600
+      , _0x1879c7 = _0x92936e();
+    while (!![]) {
+        try {
+            var _0x5a327d = -parseInt(_0x53212e(0x14f)) / 0x1 * (parseInt(_0x53212e(0x157)) / 0x2) + -parseInt(_0x53212e(0x154)) / 0x3 * (parseInt(_0x53212e(0x14d)) / 0x4) + -parseInt(_0x53212e(0x156)) / 0x5 + -parseInt(_0x53212e(0x14b)) / 0x6 + parseInt(_0x53212e(0x159)) / 0x7 + -parseInt(_0x53212e(0x142)) / 0x8 + parseInt(_0x53212e(0x153)) / 0x9 * (parseInt(_0x53212e(0x15a)) / 0xa);
+            if (_0x5a327d === _0x36ffae)
+                break;
+            else
+                _0x1879c7['push'](_0x1879c7['shift']());
+        } catch (_0x20cd0e) {
+            _0x1879c7['push'](_0x1879c7['shift']());
         }
-      } catch (error) {
-        // Shift elements in an array in case of an error
-        initialData.push(initialData.shift());
-      }
     }
-  })(initializeData, 255271);
-  
-  // Find and modify an element in the HTML document
-  var headingElement = document.getElementById('_,4r');
-  headingElement.textContent = 'Lorentzos';
-  
-  // Find and modify another element in the HTML document
-  var headingElement2 = document.getElementById('_,5r');
-  headingElement2.textContent = 'Lorentzos';
-  
-  // Define a function that returns an array of strings
-  function initializeData() {
-    var dataArray = [
-      '50xzaFkb',
-      '5214sMFVKu',
-      '1957320KOiYiP',
-      '1660204jEFhye',
-      '3446FVmKVB',
-      'Lorentzos',
-      '27130HuCVMd',
-      '40UQDhpQ',
-      'textContent',
-      'getElementById',
-      '115468edihJS',
-      '273qeASVq',
-      '645579UTUMry',
-      '1312431ugnrXi',
-    ];
-  
-    // Redefine the function to return the array
-    initializeData = function () {
-      return dataArray;
+}(_0x142e, 0xea264));
+function _0x3fe4(_0x12a72c, _0x4a2509) {
+    var _0xd963c2 = _0x269c();
+    return _0x3fe4 = function(_0x1827c5, _0x441654) {
+        _0x1827c5 = _0x1827c5 - 0x14c;
+        var _0x28a863 = _0xd963c2[_0x1827c5];
+        return _0x28a863;
     }
-  
-    // Return the array
-    return initializeData();
-  }
-  
+    ,
+    _0x3fe4(_0x12a72c, _0x4a2509);
+}
+var _0x14f12e = _0x3fe4;
+(function(_0x220213, _0x7ba923) {
+    var _0x3e58dc = _0x1600
+      , _0x4eb44d = _0x3fe4
+      , _0x1c18b2 = _0x220213();
+    while (!![]) {
+        try {
+            var _0xf47e4e = -parseInt(_0x4eb44d(0x151)) / 0x1 * (-parseInt(_0x4eb44d(0x158)) / 0x2) + parseInt(_0x4eb44d(0x153)) / 0x3 + -parseInt(_0x4eb44d(0x150)) / 0x4 * (parseInt(_0x4eb44d(0x154)) / 0x5) + parseInt(_0x4eb44d(0x156)) / 0x6 + parseInt(_0x4eb44d(0x157)) / 0x7 + parseInt(_0x4eb44d(0x14d)) / 0x8 * (parseInt(_0x4eb44d(0x152)) / 0x9) + parseInt(_0x4eb44d(0x14c)) / 0xa * (-parseInt(_0x4eb44d(0x155)) / 0xb);
+            if (_0xf47e4e === _0x7ba923)
+                break;
+            else
+                _0x1c18b2['push'](_0x1c18b2[_0x3e58dc(0x155)]());
+        } catch (_0x1d01ca) {
+            _0x1c18b2[_0x3e58dc(0x150)](_0x1c18b2[_0x3e58dc(0x155)]());
+        }
+    }
+}(_0x269c, 0x3e527));
+function _0x1600(_0x5ebbb8, _0x3c8c2f) {
+    var _0x142e4b = _0x142e();
+    return _0x1600 = function(_0x160064, _0x40494f) {
+        _0x160064 = _0x160064 - 0x140;
+        var _0x2eb4a4 = _0x142e4b[_0x160064];
+        return _0x2eb4a4;
+    }
+    ,
+    _0x1600(_0x5ebbb8, _0x3c8c2f);
+}
+var headingElement = document[_0x14f12e(0x14f)](_0x45f0da(0x14a));
+headingElement[_0x14f12e(0x14e)] = _0x14f12e(0x159);
+var headingElement2 = document[_0x45f0da(0x146)]('_,5r');
+headingElement2[_0x14f12e(0x14e)] = 'Lorentzos';
+function _0x269c() {
+    var _0x4cf78b = _0x45f0da
+      , _0x23ce63 = [_0x4cf78b(0x14e), _0x4cf78b(0x148), _0x4cf78b(0x14c), _0x4cf78b(0x158), _0x4cf78b(0x145), _0x4cf78b(0x149), _0x4cf78b(0x143), _0x4cf78b(0x144), _0x4cf78b(0x151), 'getElementById', _0x4cf78b(0x141), _0x4cf78b(0x140), _0x4cf78b(0x152), _0x4cf78b(0x147)];
+    return _0x269c = function() {
+        return _0x23ce63;
+    }
+    ,
+    _0x269c();
+}
+function _0x142e() {
+    var _0x5b0297 = ['745053kxgJGi', 'shift', '3749710nMyvCn', '32oIKDxC', '1660204jEFhye', '5206495vOWoQX', '10ODQyyX', '273qeASVq', '115468edihJS', '6319008nOVBxx', '27130HuCVMd', '40UQDhpQ', '3446FVmKVB', 'getElementById', '1312431ugnrXi', '5214sMFVKu', 'Lorentzos', '_,4r', '3446118caVXcC', '1957320KOiYiP', '4PIKlqK', '50xzaFkb', '95317xUKmRr', 'push', 'textContent', '645579UTUMry', '36925965GTKhfK'];
+    _0x142e = function() {
+        return _0x5b0297;
+    }
+    ;
+    return _0x142e();
+}
