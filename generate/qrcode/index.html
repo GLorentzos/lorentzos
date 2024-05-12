@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lorentzos QR Code Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        section {
+            margin: 40px auto;
+            max-width: 400px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            line-height: 1.5;
+            text-align: center;
+            animation: fadeInUp 1s ease-out; /* Animate.css fadeInUp */
+        }
+
+        h1 {
+            color: #008080;
+        }
+
+        label {
+            margin-right: 10px;
+        }
+
+        input {
+            padding: 8px;
+            font-size: 16px;
+            margin-bottom: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #008080;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        button:hover {
+        
+            transform: scale(1.05); /* Increase size on hover */
+        }
+
+        #qrcode-container {
+            margin-top: 20px;
+            text-align: center;
+            animation: fadeInUp 1s ease-out; /* Animate.css fadeInUp */
+        }
+
+        #qrcode {
+            opacity: 0; /* Initially invisible */
+            transform: scale(0.5); /* Initially scaled down */
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #qrcode.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        #downloadLink {
+            display: none;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #008080;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        #downloadLink:hover {
+            background-color: #005757;
+        }
+    </style>
+</head>
+<body>
+
+<section class="animate__animated animate__fadeInUp">
+    <h3>Lorentzos</h3>
+    <h1>QR Code Generator</h1>
+
+
+    <label for="linkInput"><h4>Enter Link:</h4></label>
+    <input type="text" id="linkInput" placeholder="Enter a link">
+
+    <button onclick="generateQRCode()">Generate QR Code</button>
+</section>
+
+<div id="qrcode-container" class="animate__animated animate__fadeInUp">
+    <div id="qrcode"></div>
+</div>
+
+<a id="downloadLink" download="qrcode.png" class="animate__animated animate__fadeInUp">Download QR Code</a>
+
+<script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+<script>
+    function generateQRCode() {
+        var linkInput = document.getElementById("linkInput").value;
+        var qrcodeContainer = document.getElementById("qrcode-container");
+        var qrcodeDiv = document.getElementById("qrcode");
+        var downloadLink = document.getElementById("downloadLink");
+
+        if (!linkInput) {
+            alert("Please enter a valid link.");
+            return;
+        }
+
+        qrcodeDiv.innerHTML = "";
+
+        try {
+            var qrcode = new QRCode(qrcodeDiv, {
+                text: linkInput,
+                width: 128,
+                height: 128
+            });
+
+            downloadLink.style.display = "block";
+
+            var canvas = qrcodeDiv.querySelector("canvas");
+            var tempCanvas = document.createElement("canvas");
+            var tempContext = tempCanvas.getContext("2d");
+
+            tempCanvas.width = canvas.width + 40;
+            tempCanvas.height = canvas.height + 40;
+            tempContext.fillStyle = "#ffffff";
+            tempContext.fillRect(0, 0, tempCanvas.width, tempCanvas.height);
+            tempContext.drawImage(canvas, 20, 20);
+
+            downloadLink.href = tempCanvas.toDataURL("image/png");
+
+            // Make the QR code visible with animation
+            qrcodeDiv.classList.add("visible");
+
+            qrcodeContainer.scrollIntoView({ behavior: "smooth" });
+
+        } catch (error) {
+            console.error("Error generating QR code:", error);
+            alert("Error generating QR code. Please try again.");
+        }
+    }
+</script>
+
+</body>
+</html>
