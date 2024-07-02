@@ -1,63 +1,45 @@
-<?xml version="1.0" encoding="utf-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url>
-        <loc>https://lorentzos.digital</loc>
-        <lastmod>2023-12-26</lastmod>
-        <changefreq>always</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://lorentzos.digital/calculator</loc>
-        <lastmod>2023-12-26</lastmod>
-        <changefreq>always</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://lorentzos.digital/calculator/distance</loc>
-        <lastmod>2023-12-26</lastmod>
-        <changefreq>always</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://lorentzos.digital/calculator/distance/map</loc>
-        <lastmod>2023-12-26</lastmod>
-        <changefreq>always</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://lorentzos.digital/thassos</loc>
-        <lastmod>2023-12-26</lastmod>
-        <changefreq>always</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://lorentzos.digital/thassos/itineraries</loc>
-        <lastmod>2023-12-26</lastmod>
-        <changefreq>always</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://lorentzos.digital/generate</loc>
-        <lastmod>2023-12-26</lastmod>
-        <changefreq>always</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://lorentzos.digital/generate/qrcode</loc>
-        <lastmod>2023-12-26</lastmod>
-        <changefreq>always</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://lorentzos.digital/js</loc>
-        <lastmod>2023-12-26</lastmod>
-        <changefreq>always</changefreq>
-        <priority>0.5</priority>
-    </url>
-    <url>
-        <loc>https://lorentzos.digital/js/obfuscate</loc>
-        <lastmod>2023-12-26</lastmod>
-        <changefreq>always</changefreq>
-        <priority>0.5</priority>
-    </url>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+            
+<url>
+  <loc>https://lorentzos.digital/</loc>
+  <lastmod>2024-07-02T23:16:08+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://lorentzos.digital/projects.html</loc>
+  <lastmod>2024-07-02T23:16:08+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://lorentzos.digital/index.html</loc>
+  <lastmod>2024-07-02T23:16:08+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lorentzos.digital/ai/chat</loc>
+  <lastmod>2024-07-02T23:16:08+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lorentzos.digital/calculator/distance_and_time/preview</loc>
+  <lastmod>2024-07-02T23:16:08+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lorentzos.digital/generate/qrcode/advanced</loc>
+  <lastmod>2024-07-02T23:16:08+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://lorentzos.digital/obfuscate/javascript/preview</loc>
+  <lastmod>2024-07-02T23:16:08+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
 </urlset>
