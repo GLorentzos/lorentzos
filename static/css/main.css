@@ -146,6 +146,7 @@ hr {
     background-color: #fff;
     color: #333333;
     outline: none;
+    cursor: pointer;
 }
 
 #language-select:focus {
