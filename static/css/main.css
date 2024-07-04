@@ -145,7 +145,6 @@ hr {
 
 @media (max-width: 1200px) {
     .container {
-        max-width: 100%;
         padding: 15px;
     }
 }
@@ -155,20 +154,51 @@ hr {
         font-size: 2em;
     }
 
+    p {
+        font-size: 1.1em;
+    }
+
+    .entrusted-me-title {
+        font-size: 1.3em;
+    }
 }
 
 @media (max-width: 600px) {
-
     h1 {
         font-size: 1.8em;
     }
 
     p {
+        font-size: 1em;
+    }
+
+    .entrusted-me-title {
+        font-size: 1.2em;
+    }
+
+    .container {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+
+    .entrusted-me-title {
         font-size: 1.1em;
     }
 
-    .entrusted-me-title{
-        font-size: 1.4em;
+    .footer {
+        margin-top: 30px;
     }
-    
+
+    .container {
+        padding: 5px;
+    }
 }
