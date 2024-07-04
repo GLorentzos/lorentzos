@@ -17,7 +17,7 @@ body {
 
 .container {
     max-width: 900px;
-    margin: 20px auto;
+    margin: 80px auto 20px auto; /* Adjust this margin-top to the height of the nav-line */
     padding: 20px;
     border-radius: 8px;
 }
@@ -45,13 +45,21 @@ a {
 a:hover {
     color: #2c5282;
 }
-
 .nav-line {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    background-color: #ffffff;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 10;
 }
+
 
 .nav-line .nav-link {
     margin-left: 20px;
@@ -142,6 +150,7 @@ hr {
     font-weight: bold;
     margin-bottom: 1em;
 }
+
 
 @media (max-width: 1200px) {
     .container {
