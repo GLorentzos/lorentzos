@@ -11,27 +11,27 @@ html::-webkit-scrollbar {
 body {
     background-color: #ffffff;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
+    /* line-height: 1.6; */
     color: #333333;
 }
 
 .container {
     max-width: 900px;
     margin: 80px auto 20px auto; /* Adjust this margin-top to the height of the nav-line */
-    padding: 20px;
+    /* padding: 20px; */
     border-radius: 8px;
 }
 
 h1 {
     color: #2d3748;
-    font-weight: 800;
+    font-weight: bold;
     font-size: 2.5em;
     margin-top: 0;
     margin-bottom: 20px;
 }
 
 p {
-    font-size: 1.2em;
+    font-size: 1.1em;
     margin-bottom: 1.2em;
     color: #4a5568;
 }
