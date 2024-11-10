@@ -1,0 +1,94 @@
+/* General reset and body styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Main container for forms and layout */
+.container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+/* Header style */
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Input and form controls */
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #333;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    color: #333;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    border-color: #000;
+    outline: none;
+    background-color: #fff;
+}
+
+/* Buttons styling */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #000;  /* Black background */
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #333;  /* Dark grey on hover */
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    margin-top: 15px;
+    display: inline-block;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Flash message styling */
+.flash {
+    margin: 20px 0;
+    padding: 10px;
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.flash.success {
+    background-color: #4CAF50; /* Green for success */
+}
+
+.flash.error {
+    background-color: #f44336; /* Red for error */
+}
