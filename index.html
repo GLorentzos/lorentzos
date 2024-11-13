@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Lorentzos</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* Global Styles */
         * {
@@ -36,6 +37,21 @@
             align-items: center;
             flex-direction: row;
             gap: 20px;
+            opacity: 0; /* Initially hidden */
+            transform: translateY(20px); /* Start from below */
+            animation: fadeInUp 0.5s forwards; /* Faster animation */
+        }
+
+        /* Keyframes for animation */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .intro-section {
@@ -50,6 +66,8 @@
         .text-container {
             flex: 1;
             padding: 10px;
+            opacity: 0; /* Initially hidden */
+            animation: fadeInUp 0.5s 0.1s forwards; /* Faster and shorter delay */
         }
 
         h2 {
@@ -76,6 +94,8 @@
             text-decoration: none;
             transition: all 0.3s ease;
             margin-top: 20px;
+            opacity: 0; /* Initially hidden */
+            animation: fadeInUp 0.5s 0.2s forwards; /* Faster and shorter delay */
         }
 
         .download-btn:hover {
@@ -88,6 +108,8 @@
             flex: 1;
             display: flex;
             justify-content: center;
+            opacity: 0; /* Initially hidden */
+            animation: fadeInUp 0.5s 0.3s forwards; /* Faster and shorter delay */
         }
 
         .app-icon {
@@ -98,12 +120,18 @@
             box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
         }
 
+        .icon-container {
+            font-size: 2em;
+            opacity: 0; /* Initially hidden */
+            animation: fadeInUp 0.5s 0.4s forwards; /* Faster and shorter delay for icon */
+        }
+
         .copyright {
             font-size: 0.8em;
             color: #333;
             margin-top: 30px;
         }
-        
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .intro-section {
@@ -154,7 +182,7 @@
     <div class="container">
         <section class="intro-section">
             <div class="text-container">
-                <h2>About Me</h2>
+                <h2><i class="fas fa-book"></i> About Me</h2>
                 <p class="description">I’m George Lorentzos, a full-stack developer skilled in HTML, CSS, JavaScript, Python, and C. I specialize in developing both web applications and software, creating scalable and efficient solutions with a focus on user experience.</p>
                 <hr><br>
                 <p>I’ve recently been working on a project called Lscan, an advanced antimalware system designed for Windows.</p>
