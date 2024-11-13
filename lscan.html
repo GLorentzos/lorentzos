@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LScan - Anti-Malware for Windows</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* Global Styles */
         * {
@@ -37,6 +38,21 @@
             align-items: center;
             flex-direction: row;
             gap: 20px;
+            opacity: 0; /* Initially hidden */
+            transform: translateY(20px); /* Start from below */
+            animation: fadeInUp 0.8s forwards; /* Faster animation */
+        }
+
+        /* Keyframes for animation */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .intro-section {
@@ -51,6 +67,8 @@
         .text-container {
             flex: 1;
             padding: 10px;
+            opacity: 0; /* Initially hidden */
+            animation: fadeInUp 0.8s 0.1s forwards; /* Faster with delay */
         }
 
         h2 {
@@ -77,6 +95,8 @@
             text-decoration: none;
             transition: all 0.3s ease;
             margin-top: 20px;
+            opacity: 0; /* Initially hidden */
+            animation: fadeInUp 0.8s 0.3s forwards; /* Delay animation */
         }
 
         .download-btn:hover {
@@ -89,6 +109,8 @@
             flex: 1;
             display: flex;
             justify-content: center;
+            opacity: 0; /* Initially hidden */
+            animation: fadeInUp 0.8s 0.4s forwards; /* Delay animation */
         }
 
         .app-icon {
@@ -154,7 +176,7 @@
     <div class="container">
         <section class="intro-section">
             <div class="text-container">
-                <h2>Lscan</h2>
+                <h2><i class="fas fa-shield"></i> Lscan</h2>
                 <p class="description">Real-time anti-malware protection for Windows. Protect your system against threats and ensure your data remains secure. LScan scans files in real-time, detecting and removing malicious software before it can do any harm.</p>
                 <a href="https://lorentzos.digital/Lscan.exe" class="download-btn">Download for Windows</a>
                 <p class="copyright">© Lorentzos</p>
