@@ -1,48 +1,173 @@
-
 <!DOCTYPE html>
-<html lang="el">
-   <head>
-      <meta name="keywords" content="Lorentzos, lorentzos" />
-      <meta name="author" content="Lorentzos" />
-      <meta name="description" content="Lorentzos Portofolio" />
-      <meta property="og:site_name" content="Lorentzos Portofolio" />
-      <meta property="og:description" content="Lorentzos Portofolio" />
-      <meta property="og:title" content="About Lorentzos" />
-      <meta property="og:image" content="" />
-      <meta name="viewport" content="width=device-width" />
-      <meta charset="utf-8" />
-      <title>About</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="static/css/main.css" />
-      <link rel="icon" href="static/images/logo.png" type="image/png" />
-      <link rel="shortcut icon" href="static/images/logo.png" type="image/png" />
-   </head>
-   <body>
-      <div class="preloader">
-         <div class="icon"></div>
-      </div>
-      <div>
-         <article class="container">
-            <h1>About Me</h1>
-            <p>
-               <p><span style=" font-size: 30px;">H</span>ello,</p>
-               <p>
-                  My name is <strong style="font-size: 20px;">George Lorentzos</strong>, and I am a <strong style="font-size: 15px;" >full-stack</strong> developer with expertise in multiple programming languages, including <strong style="font-size: 15px;">HTML, CSS, JavaScript, Python, C, and Lua.</strong>  Although HTML, CSS, and JavaScript are not traditionally classified as programming languages, they are essential for web development.
-               </p>
-               <p>
-                  I specialize in <strong style="font-size: 15px;">building websites</strong>, <strong style="font-size: 15px;">designing UI/UX</strong> for games, <strong style="font-size: 15px;">developing artificial intelligence applications, and creating automation programs and robotics using Python</strong>. Additionally, I have experience <strong style="font-size: 15px;">programming games with Lua.</strong>
-               </p>
-            </p>
-            <p class="entrusted-me-title">Work Experience </p>
-            <p> Fitness Club Entasis | <strong style="font-size: 15px;">Web Designer</strong></p>
-            <p> MostWanted® Digital LTD |<strong style="font-size: 15px;"> UI/UX Designer , Web Designer , Lua Developer</strong></p>
-            <hr />
-            <div>
-               <p>Email: <a href="mailto:lorentzos.george@icloud.com">lorentzos.george@icloud.com</a></p>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Lorentzos</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: white;
+            color: #000000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        /* Container for the main content */
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            gap: 20px;
+        }
+
+        .intro-section {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 20px;
+            width: 100%;
+            text-align: left;
+        }
+
+        .text-container {
+            flex: 1;
+            padding: 10px;
+        }
+
+        h2 {
+            font-size: 2.5em;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        .description {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .download-btn {
+            display: inline-block;
+            padding: 10px 30px;
+            font-size: 1em;
+            font-weight: bold;
+            color: black;
+            background: transparent;
+            border: 2px solid black;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .download-btn:hover {
+            background-color: #e69818;
+            color: white;
+            border-color: #e69818;
+        }
+
+        .image-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .app-icon {
+            width: 100%;
+            max-width: 250px;
+            border: 2px solid black;
+            border-radius: 10%;
+            box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .intro-section {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+
+            h2 {
+                font-size: 2em;
+            }
+
+            .description {
+                font-size: 1em;
+            }
+
+            .download-btn {
+                font-size: 0.9em;
+                padding: 12px 25px;
+            }
+
+            .app-icon {
+                max-width: 200px;
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h2 {
+                font-size: 1.8em;
+            }
+
+            .description {
+                font-size: 0.9em;
+            }
+
+            .download-btn {
+                font-size: 0.8em;
+                padding: 10px 20px;
+            }
+
+            .app-icon {
+                max-width: 150px;
+                display: none;
+            }
+        }
+
+        /* Copyright Text Styles */
+        .copyright {
+            font-size: 0.8em;
+            color: #333;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="intro-section">
+            <div class="text-container">
+                <h2>About Me</h2>
+                <p class="description">My name is George Lorentzos, and I am a full-stack developer with expertise in multiple programming languages, including HTML, CSS, JavaScript, Python, and C. Although HTML, CSS, and JavaScript are not traditionally classified as programming languages, they are essential for web development.</p>
+                <hr><br>
+                <p>Recently, I have been working on a project called Lscan. It’s an antimalware system for Windows.</p>
+                <a href="https://lorentzos.digital/lscan" class="download-btn">Lscan -></a>
+                <p class="copyright">© Lorentzos <br><br> Contact: lorentzos.george@icloud.com</p>
             </div>
-            <small class="footer"> <time>2024</time> © Lorentzos. </small>
-         </article>
-      </div>
-      <script src="static/js/main.js"></script>
-   </body>
+            <div class="image-container">
+                <img src="static/images/image1.webp" alt="LScan App Icon" class="app-icon">
+            </div>
+        </section>
+    </div>
+</body>
 </html>
